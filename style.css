@@ -24,6 +24,10 @@ body {
     border-bottom: solid black 1px;
     gap:10px;
     align-items: center; 
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    z-index: 1;
       
 }
 
@@ -45,6 +49,7 @@ body {
     border:none;
     width:60%;
     font-size: 15px;
+    background-color: transparent;
 }
 
 .navbar__section2 input:focus{
@@ -59,6 +64,26 @@ body {
     justify-content:space-between;  /*Default: justify-content:left*/
     gap:10px;
     align-items: center; 
+}
+
+/*styling mylearning popup*/
+.mylearning{
+    position:relative;
+    cursor: pointer;
+}
+.mylearning__popup{
+    position: absolute;
+    background-color: white;
+    border: solid black 2px;
+    width:100px;
+    padding: 10px;
+    top:25px;
+    right: 0;
+    display: none; /*the popup message will be invisible*/
+
+}
+ .mylearning:hover .mylearning__popup{  /*hover space .mylearning__popup*/
+    display: block; /*popup message will display*/
 }
 
 /*Styling Categories section*/
@@ -84,6 +109,21 @@ body {
 /*Styling sale image section*/
 .sale-image img{
     width: 100%; /*By giving this, it will adjust to the width of the parent section*/
+    position: relative;
+
+}
+
+
+/*creating offer box inside sales image*/
+.sale-image__offer{
+    background-color: white;
+    border: solid black 2px;
+    position: absolute;
+    top:200px;
+    left:50px;
+    width: 400px;
+    padding: 20px;
+
 }
 
 
