@@ -104,6 +104,16 @@ body {
     color: white;
     padding: 5px;
     border-radius: 10px;
+    border: solid  #A435F0 1px;/*here also giving the same border as hover, inorder to avoid the shaky affect during animation*/
+
+}
+/*adding animation effects*/
+.categories p:hover{
+    transition: 1s;
+    background-color: transparent;
+    color: black;
+    border: solid  #A435F0 1px;
+    cursor: pointer;
 }
 
 /*Styling sale image section*/
@@ -123,9 +133,25 @@ body {
     left:50px;
     width: 400px;
     padding: 20px;
+    animation-name: zoom;/*adding animation*/
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;/*display the animation result present at 100%*/
 
 }
+@keyframes zoom {
+    0%{
+        transform: scale(0);
+        opacity: 0;
 
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+
+    }
+    
+}
 
 /*Styling Reccomanded section*/
 .recommanded__courseimg__container{
