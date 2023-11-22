@@ -15,228 +15,314 @@ body {
 }
 
 /*Styling Navbar*/
-.navbar{
+.navbar {
     padding: 10px;
     display: flex;
-    flex-direction: row; /*Default*/
-    flex-wrap: nowrap; /*Default*/
-    justify-content:space-between;  /*Default: justify-content:left*/
+    flex-direction: row;
+    /*Default*/
+    flex-wrap: nowrap;
+    /*Default*/
+    justify-content: space-between;
+    /*Default: justify-content:left*/
     border-bottom: solid black 1px;
-    gap:10px;
-    align-items: center; 
+    gap: 10px;
+    align-items: center;
     position: sticky;
     top: 0px;
     background-color: white;
     z-index: 1;
-      
+
 }
 
-.navbar__section1__title{
-    color:#A435F0;
+.navbar__section1__title {
+    color: #A435F0;
 }
 
-.navbar__section2{
-    padding:10px;
+.navbar__section2 {
+    padding: 10px;
     border: solid black 1px;
     border-radius: 30px;
-    width:60%;
+    width: 60%;
     display: flex;
-    gap:10px;
-    align-items: center; 
+    gap: 10px;
+    align-items: center;
 }
 
-.navbar__section2 input{
-    border:none;
-    width:60%;
+.navbar__section2 input {
+    border: none;
+    width: 60%;
     font-size: 15px;
     background-color: transparent;
 }
 
-.navbar__section2 input:focus{
+.navbar__section2 input:focus {
     outline: none;
 }
 
-.navbar__section3{
+.navbar__section3 {
     padding: 10px;
     display: flex;
-    flex-direction: row; /*Default*/
-    flex-wrap: nowrap; /*Default*/
-    justify-content:space-between;  /*Default: justify-content:left*/
-    gap:10px;
-    align-items: center; 
+    flex-direction: row;
+    /*Default*/
+    flex-wrap: nowrap;
+    /*Default*/
+    justify-content: space-between;
+    /*Default: justify-content:left*/
+    gap: 10px;
+    align-items: center;
+}
+
+.navbar__section4 {
+    display: none;
 }
 
 /*styling mylearning popup*/
-.mylearning{
-    position:relative;
+.mylearning {
+    position: relative;
     cursor: pointer;
 }
-.mylearning__popup{
+
+.mylearning__popup {
     position: absolute;
     background-color: white;
     border: solid black 2px;
-    width:100px;
+    width: 100px;
     padding: 10px;
-    top:25px;
+    top: 25px;
     right: 0;
-    display: none; /*the popup message will be invisible*/
+    display: none;
+    /*the popup message will be invisible*/
 
 }
- .mylearning:hover .mylearning__popup{  /*hover space .mylearning__popup*/
-    display: block; /*popup message will display*/
+
+.mylearning:hover .mylearning__popup {
+    /*hover space .mylearning__popup*/
+    display: block;
+    /*popup message will display*/
 }
 
 /*Styling Categories section*/
-.categories{
+.categories {
     padding: 10px;
     display: flex;
-    flex-direction: row; /*Default*/
-    flex-wrap: nowrap; /*Default*/
-    justify-content:space-between;  /*Default: justify-content:left*/
+    flex-direction: row;
+    /*Default*/
+    flex-wrap: nowrap;
+    /*Default*/
+    justify-content: space-between;
+    /*Default: justify-content:left*/
     border-bottom: solid black 1px;
-    gap:10px;
-    align-items: center; 
+    gap: 10px;
+    align-items: center;
 
 }
 
-.categories p{
+.categories p {
     background-color: #A435F0;
     color: white;
-    padding: 5px;
+    padding: 10px;
     border-radius: 10px;
-    border: solid  #A435F0 1px;/*here also giving the same border as hover, inorder to avoid the shaky affect during animation*/
+    border: solid #A435F0 1px;
+    /*here also giving the same border as hover, inorder to avoid the shaky affect during animation*/
 
 }
+
 /*adding animation effects*/
-.categories p:hover{
+.categories p:hover {
     transition: 1s;
     background-color: transparent;
     color: black;
-    border: solid  #A435F0 1px;
+    border: solid #A435F0 1px;
     cursor: pointer;
 }
 
 /*Styling sale image section*/
-.sale-image img{
-    width: 100%; /*By giving this, it will adjust to the width of the parent section*/
+.sale-image img {
+    width: 100%;
+    /*By giving this, it will adjust to the width of the parent section*/
     position: relative;
 
 }
 
 
 /*creating offer box inside sales image*/
-.sale-image__offer{
+.sale-image__offer {
     background-color: white;
     border: solid black 2px;
     position: absolute;
-    top:200px;
-    left:50px;
-    width: 400px;
-    padding: 20px;
-    animation-name: zoom;/*adding animation*/
+    top: 25%;
+    left:5%;
+    padding: 15px;
+    width:35%;
+    animation-name: zoom;
+
+    /*adding animation*/
     animation-duration: 2s;
     opacity: 0;
-    animation-fill-mode: forwards;/*display the animation result present at 100%*/
+    animation-fill-mode: forwards;
+    /*display the animation result present at 100%*/
 
 }
+
 @keyframes zoom {
-    0%{
+    0% {
         transform: scale(0);
         opacity: 0;
 
     }
-    100%{
+
+    100% {
         transform: scale(1);
         opacity: 1;
 
     }
-    
+
 }
 
 /*Styling Reccomanded section*/
-.recommanded__courseimg__container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 5px;
+.recommanded__title,
+.recommanded p {
+    margin-left: 10px;
 }
-    /*Styling coursecards section*/
-    .course-cards{
-        width:20%;
-    }
 
-    .course-cards img{
-        height:50%;
-        width:100%;  /*course card is the parent its width is 20%, by giving img width 100% it will adjust to the parent width 20% */
-
-    }
-
-/*Styling course topics section*/
-.topics{
+.recommanded__courseimg__container {
     padding: 10px;
-}
-
-.topics__container{
-    display: flex;
-    flex-wrap: wrap;
-    gap:10px;
-    padding: 10px;
-    margin-top:10px;
-
-}
-
-.topics__container p{
-    padding: 10px;
-    border: black solid 2px;
-    flex-grow: 1;
-    flex-basis: 25%; /*similar to width setting*/
-}
-
-/*Styling Most popular topics section*/
-.populartopics__container{
-    padding:10px;
     margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    gap:10px;
+    gap: 10px;
 }
 
-.populartopics__container img{
-    width:100%;
-    height:50%;
-     
+/*Styling coursecards section*/
+.course-cards {
+    /* width:20%; */
+    flex-grow: 1;
+    flex-basis: 20%;
+    margin: 5px;
+}
+
+.course-cards img {
+    height: 50%;
+    width: 100%;
+    /*course card is the parent its width is 20%, by giving img width 100% it will adjust to the parent width 20% */
+
+}
+
+/*Styling course topics section*/
+.topics {
+    padding: 10px;
+}
+
+.topics h1 {
+    margin-left: 10px;
+}
+
+
+.topics__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+.topics__container p {
+    padding: 10px;
+    border: black solid 2px;
+    flex-grow: 1;
+    flex-basis: 25%;
+    /*similar to width setting*/
+}
+
+/*Styling Most popular topics section*/
+.populartopics__title,
+.populartopics__subtitle {
+    margin-left: 10px;
+}
+
+.populartopics__container {
+    padding: 10px;
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.populartopics__container img {
+    width: 100%;
+    height: 50%;
+
 }
 
 /*Styling footer section*/
-.footer{
+.footer {
     background-color: black;
     color: white;
     padding: 30px;
     margin-top: 10px;
-  
+
 }
 
-.footer__one{
-    display:flex;
+.footer__one {
+    display: flex;
     padding: 10px;
-    gap:10px;
+    gap: 10px;
 }
 
-.footer__one p{
+.footer__one p {
     margin: 20px;
-    gap:10px
-
+    gap: 10px
 }
 
-.footer__two{
-    display:flex;
+.footer__two {
+    display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 20px;
     padding: 10px;
 }
 
- 
+/* Media Query to make responsive website */
+/* First write for tablet since it has bid screen and then write for mobile */
+/* media query for tablet */
+@media screen and (max-width:800px) {
+    body {
+        font-size: 10px;
+    }
+}
+
+/* media query for mobile */
+@media screen and (max-width:500px) {
+    body {
+        font-size: 8px;
+    }
+    .course-cards {
+        flex-basis: 40%;
+    }
+
+    .categories {
+        display: none;
+    }
+
+    .navbar__section2,
+    .navbar__section3 {
+        display: none;
+    }
+
+    .navbar__section4{
+        display: block;
+    }
+/* 
+    .sale-image__offer{
+        position: absolute;
+        top:10%;
+        height: 40px;
+        width:200px;
+        padding: 10px;
 
 
+    } */
+}
